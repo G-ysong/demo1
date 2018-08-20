@@ -1,0 +1,57 @@
+/*===========================reset====================*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    font-size: 14px;
+    font-family: 'Microsoft YaHei', sans-serif;
+    color: #333;
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+input, textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    /*元素的外观  none没有任何样式*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/*=============common css ================*/
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearFix::before,
+.clearFix::after{
+    content: '';
+    display: block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+
+/*使用精灵图的公共样式*/
+[class^="icon_"],[class*=" icon_"]{
+    background-repeat: no-repeat;
+    background-image: url("../images/sprites.png");
+    background-size: 200px 200px;
+}
